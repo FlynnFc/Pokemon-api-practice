@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 const Selector = (props) => {
-  const numberInput = document.querySelector("#numberSelector");
-  let numberVal = numberInput.value;
-  const [total, setTotal] = useState(0);
-  props.totalGetter(total);
+  const [total, setTotal] = useState(30);
+  props.totalGetter({ total });
+  console.log(total);
 
   return (
     <>
       <input
-        onInput={() => setTotal({ numberVal })}
+        onInput={(e) => setTotal(e.target.value)}
         type="number"
         id="numberSelector"
         min="1"
+        defaultValue="30"
         max="998"
         className="border-solid border-white text-xl"
       ></input>

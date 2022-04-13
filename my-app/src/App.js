@@ -4,15 +4,16 @@ import Pokemon from "./components/Pokemon";
 import Selector from "./components/Selector";
 
 function App() {
-  const totalGetter = (inputVal) => {
-    let inputFromForm = inputVal;
+  const totalGotten = (inputVal) => {
+    numberOfPokemon = inputVal;
+    console.log(numberOfPokemon);
   };
 
   return (
     <div className="font-bold text-5xl text-white text-center">
       <Banner></Banner>
-      <Selector totalGetter={totalGetter}></Selector>
-      <Pokemon inputVal={inputVal}></Pokemon>
+      <Selector totalGetter={totalGotten}></Selector>
+      <Pokemon total={numberOfPokemon}></Pokemon>
     </div>
   );
 }
