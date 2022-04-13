@@ -8,7 +8,7 @@ const Selector = (props) => {
         id="numberSelector"
         min="1"
         max="998"
-        className="border-solid border-white "
+        className="border-solid border-white text-xl"
       ></input>
     </>
   );
