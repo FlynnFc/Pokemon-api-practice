@@ -1,22 +1,25 @@
-const imgSoruce =
+import React, { useEffect } from "react";
+
+const imgSource =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 const section = document.querySelector("#container");
 
 const Pokemon = (props) => {
+  useEffect(() => {
+    for (let i = 1; i < props.total; i++) {
+      const img = React.createElement("img");
+      const pokemon = React.createElement("div");
+      const number = React.createElement("span");
+      number.innerText = i;
+      img.src = imgSource + i + ".png";
+      console.log(img.src);
+      section.appendChild(pokemon);
+      pokemon.appendChild(number);
+      pokemon.appendChild(img);
+    }
+  }, [props.total]);
+
   console.log(props.total);
-  const goPokemon = (max) => {
-    // for (let i = 1; i < { max }; i++) {
-    //   const img = document.createElement("img");
-    //   const pokemon = document.createElement("div");
-    //   const number = document.createElement("span");
-    //   number.innerText = i;
-    //   img.src = imgSource + i + ".png";
-    //   console.log(img.src);
-    //   section.appendChild(pokemon);
-    //   pokemon.appendChild(number);
-    //   pokemon.appendChild(img);
-    // }
-  };
 
   return (
     <div id="container">

@@ -4,6 +4,8 @@ import Pokemon from "./components/Pokemon";
 import Selector from "./components/Selector";
 
 function App() {
+  let numberOfPokemon = 20;
+
   const totalGotten = (inputVal) => {
     numberOfPokemon = inputVal;
     console.log(numberOfPokemon);
