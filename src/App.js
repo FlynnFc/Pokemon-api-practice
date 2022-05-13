@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Banner from "./components/Banner";
-import Selector from "./components/Selector";
+import Banner from "./Banner";
+import Selector from "./Selector";
 
 function App() {
   return (
