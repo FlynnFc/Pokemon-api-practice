@@ -8,12 +8,16 @@ const PokemonContainer = (props) => {
   const numberOfPokemon = props.totalPokemon;
   let total = [];
   for (let i = 1; i < numberOfPokemon; i++) {
-    total.push(
-      <div key={i}>
-        <img src={imgSource + i + ".png"}></img>
-        <span>{i}</span>
-      </div>
-    );
+    if (i > 898) {
+      break;
+    } else {
+      total.push(
+        <div key={i}>
+          <img src={imgSource + i + ".png"}></img>
+          <span className="text-3xl">{i}</span>
+        </div>
+      );
+    }
   }
   return total;
 };
