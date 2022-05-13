@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 import Selector from "./components/Selector";

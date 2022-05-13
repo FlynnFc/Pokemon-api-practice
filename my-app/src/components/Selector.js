@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import PokemonContainer from "./PokemonContainer";
 
 const Selector = () => {
-  const [total, setTotal] = useState(500);
-  const imgSource =
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+  const [total, setTotal] = useState(100);
+  const adjustedTotal = parseInt(total) + 1;
 
   return (
     <>
@@ -12,18 +12,12 @@ const Selector = () => {
         type="number"
         id="numberSelector"
         min="1"
-        defaultValue="500"
+        defaultValue="100"
         max="998"
         className="border-solid border-white text-xl"
       ></input>
-      <div id="container">
-        <img
-          alt="img of a pokemon"
-          src={
-            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-          }
-        ></img>
-        <span className="text-2xl">#1</span>
+      <div className="flex flex-wrap ease-in duration-300">
+        <PokemonContainer totalPokemon={adjustedTotal}></PokemonContainer>
       </div>
     </>
   );
